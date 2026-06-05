@@ -3,6 +3,7 @@ import { ServicePageLayout } from "@/components/ServicePageLayout";
 import { CTABanner } from "@/components/sections/CTABanner";
 import { JsonLd } from "@/components/JsonLd";
 import { KontorsstadningContent } from "@/content/kontorsstadning-content";
+import { SITE } from "@/lib/constants";
 import { breadcrumbSchema, createMetadata, serviceSchema } from "@/lib/seo";
 
 export const metadata: Metadata = createMetadata({
@@ -22,7 +23,7 @@ export default function KontorsstadningPage() {
           serviceSchema(
             "Kontorsstädning Kristianstad",
             "Professionell kontorsstädning för företag i Kristianstad.",
-            "https://glasklarstad.se/kontorsstadning-kristianstad"
+            `${SITE.url}/kontorsstadning-kristianstad`
           ),
           breadcrumbSchema([
             { name: "Hem", url: "/" },

@@ -3,7 +3,7 @@ export const SITE = {
   shortName: "Glasklart",
   legalName: "Glasklart Städ Kristianstad",
   domain: "glasklarstad.se",
-  url: "https://glasklarstad.se",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://glasklarstad.se",
   description:
     "Professionell fönsterputs i Kristianstad. Erfarna fönsterputsare för villor, lägenheter och företag. Även hemstädning, flyttstädning och kontorsstädning. Kostnadsfri offert.",
   locale: "sv_SE",

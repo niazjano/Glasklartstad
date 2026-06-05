@@ -5,6 +5,7 @@ import { FAQSection } from "@/components/sections/FAQSection";
 import { JsonLd } from "@/components/JsonLd";
 import { FonsterputsContent } from "@/content/fonsterputs-content";
 import { FONSTERPUTS_FAQS } from "@/lib/faq-data";
+import { SITE } from "@/lib/constants";
 import {
   breadcrumbSchema,
   createMetadata,
@@ -32,7 +33,7 @@ export default function FonsterputsPage() {
           serviceSchema(
             "Fönsterputs Kristianstad",
             "Professionell fönsterputs för villor, lägenheter och företag i Kristianstad.",
-            "https://glasklarstad.se/fonsterputs-kristianstad"
+            `${SITE.url}/fonsterputs-kristianstad`
           ),
           breadcrumbSchema([
             { name: "Hem", url: "/" },
