@@ -1,0 +1,44 @@
+import type { Metadata } from "next";
+import { ServicePageLayout } from "@/components/ServicePageLayout";
+import { CTABanner } from "@/components/sections/CTABanner";
+import { JsonLd } from "@/components/JsonLd";
+import { FlyttstadningContent } from "@/content/flyttstadning-content";
+import { breadcrumbSchema, createMetadata, serviceSchema } from "@/lib/seo";
+
+export const metadata: Metadata = createMetadata({
+  title: "Flyttstädning Kristianstad – Godkänd Städning",
+  description:
+    "Professionell flyttstädning i Kristianstad enligt branschstandard. Godkänd städning vid inflyttning och utflyttning. Kostnadsfri offert.",
+  path: "/flyttstadning-kristianstad",
+  keywords: ["Flyttstädning Kristianstad"],
+  ogImage: "/images/fonsterputs-squeegee.png",
+});
+
+export default function FlyttstadningPage() {
+  return (
+    <>
+      <JsonLd
+        data={[
+          serviceSchema(
+            "Flyttstädning Kristianstad",
+            "Grundlig flyttstädning i Kristianstad enligt branschstandard.",
+            "https://glasklarstad.se/flyttstadning-kristianstad"
+          ),
+          breadcrumbSchema([
+            { name: "Hem", url: "/" },
+            { name: "Flyttstädning Kristianstad", url: "/flyttstadning-kristianstad" },
+          ]),
+        ]}
+      />
+      <ServicePageLayout
+        title="Flyttstädning Kristianstad"
+        subtitle="Grundlig flyttstädning enligt branschstandard. Godkänd städning vid inflyttning och utflyttning i Kristianstad."
+        image="/images/fonsterputs-squeegee.png"
+        imageAlt="Flyttstädning Kristianstad – professionell städservice"
+      >
+        <FlyttstadningContent />
+      </ServicePageLayout>
+      <CTABanner />
+    </>
+  );
+}
