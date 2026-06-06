@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { CONTACT, SITE } from "./constants";
+import { IMAGES } from "./images";
 
 type PageMeta = {
   title: string;
@@ -14,7 +15,7 @@ export function createMetadata({
   description,
   path,
   keywords = [],
-  ogImage = "/images/hero-fonsterputs.png",
+  ogImage = IMAGES.hero,
 }: PageMeta): Metadata {
   const url = `${SITE.url}${path}`;
   const fullTitle = `${title} | ${SITE.name}`;

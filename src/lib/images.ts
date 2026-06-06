@@ -1,7 +1,6 @@
-/** Absolute path for static assets (works with static export + custom domain). */
-export function asset(path: string): string {
-  return path.startsWith("/") ? path : `/${path}`;
-}
+import { asset } from "./paths";
+
+export { asset };
 
 export const IMAGES = {
   hero: asset("/images/hero-fonsterputs.png"),

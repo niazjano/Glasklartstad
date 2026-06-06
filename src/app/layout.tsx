@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { JsonLd } from "@/components/JsonLd";
+import { asset } from "@/lib/paths";
 import { createMetadata, localBusinessSchema } from "@/lib/seo";
 import "./globals.css";
 
@@ -29,8 +30,8 @@ export const metadata: Metadata = {
     ],
   }),
   icons: {
-    icon: "/logo.svg",
-    apple: "/logo.svg",
+    icon: asset("/logo.svg"),
+    apple: asset("/logo.svg"),
   },
 };
 
