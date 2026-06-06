@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { CONTACT, ROUTES } from "@/lib/constants";
+import { asset } from "@/lib/images";
 
 type ServicePageLayoutProps = {
   title: string;
@@ -25,30 +26,30 @@ export function ServicePageLayout({
       <section className="relative overflow-hidden pt-16 sm:pt-20">
         <div className="absolute inset-0">
           <Image
-            src={image}
+            src={asset(image)}
             alt={imageAlt}
             fill
             priority
             className="object-cover"
             sizes="100vw"
-            quality={85}
+            unoptimized
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/96 to-white/45" />
         </div>
 
-        <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
+        <div className="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-32 lg:px-8">
           {breadcrumbs.length > 0 && (
-            <nav aria-label="Brödsmulor" className="mb-6">
-              <ol className="flex flex-wrap items-center gap-2 text-sm text-muted">
+            <nav aria-label="Brödsmulor" className="mb-8">
+              <ol className="flex flex-wrap items-center gap-2 text-sm text-slate-500">
                 <li>
-                  <Link href="/" className="hover:text-foreground">
+                  <Link href="/" className="hover:text-[#0f172a]">
                     Hem
                   </Link>
                 </li>
                 {breadcrumbs.map((crumb) => (
                   <li key={crumb.href} className="flex items-center gap-2">
                     <span aria-hidden>/</span>
-                    <Link href={crumb.href} className="hover:text-foreground">
+                    <Link href={crumb.href} className="hover:text-[#0f172a]">
                       {crumb.label}
                     </Link>
                   </li>
@@ -58,26 +59,26 @@ export function ServicePageLayout({
           )}
 
           <div className="max-w-3xl">
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+            <h1 className="text-4xl font-bold tracking-tight text-[#0f172a] sm:text-5xl">
               {title}
             </h1>
-            <p className="mt-6 text-lg leading-relaxed text-muted sm:text-xl">
+            <p className="mt-6 text-lg leading-relaxed text-slate-600 sm:text-xl">
               {subtitle}
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Button href={ROUTES.quote} size="lg">
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+              <Button href={ROUTES.quote} variant="primary" size="lg">
                 Få Gratis Offert
               </Button>
               <Button href={CONTACT.mobileHref} variant="secondary" size="lg">
-                Ring {CONTACT.mobile}
+                Ring Nu
               </Button>
             </div>
           </div>
         </div>
       </section>
 
-      <article className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="service-content space-y-6 text-muted leading-relaxed [&_h2]:mt-12 [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:tracking-tight [&_h2]:text-foreground [&_h3]:mt-8 [&_h3]:text-xl [&_h3]:font-semibold [&_h3]:text-foreground [&_a]:font-medium [&_a]:text-brand-600 [&_a]:hover:underline [&_li]:ml-5 [&_li]:list-disc [&_p]:leading-relaxed [&_strong]:font-semibold [&_strong]:text-foreground [&_ul]:space-y-2">
+      <article className="mx-auto max-w-3xl px-4 py-20 sm:px-6 lg:px-8">
+        <div className="service-content space-y-6 text-slate-600 leading-relaxed [&_h2]:mt-12 [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:text-[#0f172a] [&_h3]:mt-8 [&_h3]:text-xl [&_h3]:font-semibold [&_h3]:text-[#0f172a] [&_a]:font-medium [&_a]:text-blue-600 [&_a]:hover:underline [&_li]:ml-5 [&_li]:list-disc [&_strong]:text-[#0f172a] [&_ul]:space-y-2">
           {children}
         </div>
       </article>

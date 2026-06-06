@@ -6,6 +6,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { FonsterputsContent } from "@/content/fonsterputs-content";
 import { FONSTERPUTS_FAQS } from "@/lib/faq-data";
 import { SITE } from "@/lib/constants";
+import { IMAGES } from "@/lib/images";
 import {
   breadcrumbSchema,
   createMetadata,
@@ -19,6 +20,7 @@ export const metadata: Metadata = createMetadata({
     "Professionell fönsterputs i Kristianstad för villor, lägenheter, företag och butiker. Erfarna fönsterputsare. Kostnadsfri offert. Ring 076-285 53 34.",
   path: "/fonsterputs-kristianstad",
   keywords: [
+    "Fönsterputsning Kristianstad",
     "Fönsterputs Kristianstad",
     "Fönsterputsare Kristianstad",
     "Professionell Fönsterputs Kristianstad",
@@ -45,7 +47,7 @@ export default function FonsterputsPage() {
       <ServicePageLayout
         title="Fönsterputs Kristianstad"
         subtitle="Professionell fönsterputs för villor, lägenheter, företag och butiker. Skinande rena fönster av erfarna fönsterputsare i Kristianstad."
-        image="/images/hero-fonsterputs.png"
+        image={IMAGES.hero}
         imageAlt="Professionell fönsterputs Kristianstad – fönsterputsare rengör fönster på villa"
       >
         <FonsterputsContent />

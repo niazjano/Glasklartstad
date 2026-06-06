@@ -15,38 +15,35 @@ export function LogoIcon({
   className?: string;
   variant?: "default" | "light";
 }) {
-  const stroke = variant === "light" ? "#ffffff" : "#0f172a";
-  const fill = variant === "light" ? "#ffffff" : "#0f172a";
-  const accent = variant === "light" ? "#94a3b8" : "#3b82f6";
+  const frame = variant === "light" ? "#ffffff" : "#0f172a";
+  const glass = variant === "light" ? "#e2e8f0" : "#94a3b8";
+  const sparkle = variant === "light" ? "#60a5fa" : "#3b82f6";
 
   return (
     <svg
-      viewBox="0 0 40 40"
+      viewBox="0 0 48 48"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={cn("h-9 w-9 shrink-0", className)}
+      className={cn("h-10 w-10 shrink-0", className)}
       aria-hidden
     >
-      <rect
-        x="4"
-        y="4"
-        width="32"
-        height="32"
-        rx="4"
-        stroke={stroke}
-        strokeWidth="2"
-      />
-      <line x1="20" y1="4" x2="20" y2="36" stroke={stroke} strokeWidth="1.5" />
-      <line x1="4" y1="20" x2="36" y2="20" stroke={stroke} strokeWidth="1.5" />
+      <rect x="8" y="8" width="32" height="32" rx="3" stroke={frame} strokeWidth="2.5" />
+      <line x1="24" y1="8" x2="24" y2="40" stroke={glass} strokeWidth="1.5" />
+      <line x1="8" y1="24" x2="40" y2="24" stroke={glass} strokeWidth="1.5" />
       <path
-        d="M24 10 L30 16 L24 22"
-        stroke={accent}
+        d="M14 30 L20 18 L26 26 L32 14"
+        stroke={sparkle}
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        fill="none"
+        opacity="0.85"
       />
-      <circle cx="12" cy="12" r="2" fill={fill} opacity="0.15" />
+      <path
+        d="M30 12 L32 16 L36 14 L34 18 L38 20 L34 22 L36 26 L32 24 L30 28 L28 24 L24 26 L26 22 L22 20 L26 18 L24 14 L28 16 Z"
+        fill={sparkle}
+        opacity="0.95"
+      />
+      <circle cx="17" cy="17" r="2" fill={sparkle} opacity="0.35" />
     </svg>
   );
 }
@@ -68,19 +65,19 @@ export function Logo({
     >
       <LogoIcon variant={variant} />
       {showText && (
-        <div className="flex flex-col leading-tight">
+        <div className="flex flex-col leading-none">
           <span
             className={cn(
-              "text-base font-bold tracking-tight sm:text-lg",
-              isLight ? "text-white" : "text-foreground"
+              "text-lg font-bold tracking-tight",
+              isLight ? "text-white" : "text-[#0f172a]"
             )}
           >
             Glasklart
           </span>
           <span
             className={cn(
-              "text-[11px] font-medium tracking-wide sm:text-xs",
-              isLight ? "text-slate-300" : "text-muted"
+              "mt-0.5 text-[11px] font-medium tracking-[0.12em] uppercase",
+              isLight ? "text-slate-300" : "text-slate-500"
             )}
           >
             Fönsterputs & Städ

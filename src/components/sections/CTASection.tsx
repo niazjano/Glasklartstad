@@ -22,9 +22,9 @@ export function CTASection({
   return (
     <section
       className={cn(
-        "py-16 sm:py-20",
-        variant === "dark" && "bg-foreground",
-        variant === "surface" && "bg-surface",
+        "py-20 sm:py-24",
+        variant === "dark" && "bg-[#0f172a]",
+        variant === "surface" && "bg-slate-50",
         variant === "light" && "bg-white",
         className
       )}
@@ -32,42 +32,37 @@ export function CTASection({
       <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
         <h2
           className={cn(
-            "text-2xl font-bold tracking-tight sm:text-3xl",
-            isDark ? "text-white" : "text-foreground"
+            "text-2xl font-bold tracking-tight sm:text-3xl lg:text-4xl",
+            isDark ? "text-white" : "text-[#0f172a]"
           )}
         >
           {title}
         </h2>
         <p
           className={cn(
-            "mt-4 text-lg leading-relaxed",
-            isDark ? "text-slate-300" : "text-muted"
+            "mt-5 text-lg leading-relaxed",
+            isDark ? "text-slate-300" : "text-slate-600"
           )}
         >
           {description}
         </p>
-        <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
           {isDark ? (
             <>
-              <Button href={ROUTES.quote} variant="inverse" size="lg">
+              <Button href={ROUTES.quote} variant="darkPrimary" size="lg">
                 {primaryLabel}
               </Button>
-              <Button
-                href={CONTACT.mobileHref}
-                variant="secondary"
-                size="lg"
-                className="border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white"
-              >
-                Ring {CONTACT.mobile}
+              <Button href={CONTACT.mobileHref} variant="darkSecondary" size="lg">
+                Ring Nu
               </Button>
             </>
           ) : (
             <>
-              <Button href={ROUTES.quote} size="lg">
+              <Button href={ROUTES.quote} variant="primary" size="lg">
                 {primaryLabel}
               </Button>
               <Button href={CONTACT.mobileHref} variant="secondary" size="lg">
-                Ring {CONTACT.mobile}
+                Ring Nu
               </Button>
             </>
           )}

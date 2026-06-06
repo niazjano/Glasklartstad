@@ -4,6 +4,7 @@ import { CTABanner } from "@/components/sections/CTABanner";
 import { JsonLd } from "@/components/JsonLd";
 import { KontorsstadningContent } from "@/content/kontorsstadning-content";
 import { SITE } from "@/lib/constants";
+import { IMAGES } from "@/lib/images";
 import { breadcrumbSchema, createMetadata, serviceSchema } from "@/lib/seo";
 
 export const metadata: Metadata = createMetadata({
@@ -12,7 +13,7 @@ export const metadata: Metadata = createMetadata({
     "Professionell kontorsstädning i Kristianstad för företag och kontor. Renare arbetsmiljö, nöjdare medarbetare. Kostnadsfri offert.",
   path: "/kontorsstadning-kristianstad",
   keywords: ["Kontorsstädning Kristianstad"],
-  ogImage: "/images/hemstadning.png",
+  ogImage: IMAGES.hemstadning,
 });
 
 export default function KontorsstadningPage() {
@@ -34,7 +35,7 @@ export default function KontorsstadningPage() {
       <ServicePageLayout
         title="Kontorsstädning Kristianstad"
         subtitle="Professionell kontorsstädning för företag i Kristianstad. Renare arbetsmiljö, nöjdare medarbetare och ett professionellt intryck."
-        image="/images/hemstadning.png"
+        image={IMAGES.hemstadning}
         imageAlt="Kontorsstädning Kristianstad – professionell städservice för företag"
       >
         <KontorsstadningContent />

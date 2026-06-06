@@ -4,6 +4,7 @@ import { CTABanner } from "@/components/sections/CTABanner";
 import { JsonLd } from "@/components/JsonLd";
 import { FlyttstadningContent } from "@/content/flyttstadning-content";
 import { SITE } from "@/lib/constants";
+import { IMAGES } from "@/lib/images";
 import { breadcrumbSchema, createMetadata, serviceSchema } from "@/lib/seo";
 
 export const metadata: Metadata = createMetadata({
@@ -12,7 +13,7 @@ export const metadata: Metadata = createMetadata({
     "Professionell flyttstädning i Kristianstad enligt branschstandard. Godkänd städning vid inflyttning och utflyttning. Kostnadsfri offert.",
   path: "/flyttstadning-kristianstad",
   keywords: ["Flyttstädning Kristianstad"],
-  ogImage: "/images/fonsterputs-squeegee.png",
+  ogImage: IMAGES.squeegee,
 });
 
 export default function FlyttstadningPage() {
@@ -34,7 +35,7 @@ export default function FlyttstadningPage() {
       <ServicePageLayout
         title="Flyttstädning Kristianstad"
         subtitle="Grundlig flyttstädning enligt branschstandard. Godkänd städning vid inflyttning och utflyttning i Kristianstad."
-        image="/images/fonsterputs-squeegee.png"
+        image={IMAGES.squeegee}
         imageAlt="Flyttstädning Kristianstad – professionell städservice"
       >
         <FlyttstadningContent />

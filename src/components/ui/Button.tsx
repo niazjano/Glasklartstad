@@ -4,23 +4,31 @@ import { cn } from "@/lib/utils";
 type ButtonProps = {
   href: string;
   children: React.ReactNode;
-  variant?: "primary" | "secondary" | "outline" | "ghost" | "inverse";
+  variant?: "primary" | "secondary" | "ghost" | "darkPrimary" | "darkSecondary";
   size?: "sm" | "md" | "lg";
   className?: string;
   external?: boolean;
 };
 
+const navy = "bg-[#0f172a] text-white border-2 border-[#0f172a]";
+const navyHover =
+  "hover:bg-[#1e293b] hover:border-[#1e293b] hover:shadow-lg hover:-translate-y-0.5";
+
 const variants = {
-  primary:
-    "bg-foreground text-white shadow-md hover:bg-slate-800 hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0",
-  secondary:
-    "border-2 border-slate-200 bg-white text-foreground shadow-sm hover:border-slate-300 hover:bg-slate-50 hover:shadow-md hover:-translate-y-0.5 active:translate-y-0",
-  outline:
-    "border-2 border-slate-300 bg-white text-foreground shadow-sm hover:border-foreground hover:shadow-md hover:-translate-y-0.5 active:translate-y-0",
-  ghost:
-    "text-foreground hover:bg-surface-muted",
-  inverse:
-    "border-2 border-white/40 bg-white text-foreground shadow-md hover:bg-slate-50 hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0",
+  primary: cn(navy, navyHover, "shadow-md active:translate-y-0"),
+  secondary: cn(
+    "bg-white text-[#0f172a] border-2 border-[#0f172a]",
+    "shadow-sm hover:bg-slate-50 hover:shadow-md hover:-translate-y-0.5 active:translate-y-0"
+  ),
+  ghost: "text-[#0f172a] hover:bg-slate-100",
+  darkPrimary: cn(
+    "bg-white text-[#0f172a] border-2 border-white",
+    "shadow-lg hover:bg-slate-50 hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0"
+  ),
+  darkSecondary: cn(
+    "bg-transparent text-white border-2 border-white/80",
+    "hover:bg-white/10 hover:border-white hover:-translate-y-0.5 active:translate-y-0"
+  ),
 };
 
 const sizes = {
@@ -38,7 +46,8 @@ export function Button({
   external,
 }: ButtonProps) {
   const classes = cn(
-    "inline-flex items-center justify-center gap-2 rounded-xl transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2",
+    "inline-flex items-center justify-center gap-2 rounded-xl transition-all duration-200",
+    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2",
     variants[variant],
     sizes[size],
     className

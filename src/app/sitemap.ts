@@ -7,18 +7,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
     "",
     "/fonsterputs-kristianstad",
+    "/stadning-kristianstad",
     "/hemstadning-kristianstad",
-    "/flyttstadning-kristianstad",
     "/kontorsstadning-kristianstad",
+    "/flyttstadning-kristianstad",
     "/gratis-offert",
-    "/stadning",
     "/om-oss",
     "/kontakt",
     "/integritetspolicy",
   ];
 
   return routes.map((route) => ({
-    url: `${SITE.url}${route}`,
+    url: `${SITE.url}${route}${route === "" ? "" : "/"}`,
     lastModified: new Date(),
     changeFrequency: route === "" ? "weekly" : "monthly",
     priority:

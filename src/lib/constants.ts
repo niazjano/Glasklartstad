@@ -2,10 +2,10 @@ export const SITE = {
   name: "Glasklart Fönsterputs & Städ",
   shortName: "Glasklart",
   legalName: "Glasklart Städ Kristianstad",
-  domain: "glasklarstad.se",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://glasklarstad.se",
+  domain: "glasklartstad.se",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://glasklartstad.se",
   description:
-    "Professionell fönsterputs i Kristianstad. Erfarna fönsterputsare för villor, lägenheter och företag. Även hemstädning, flyttstädning och kontorsstädning. Kostnadsfri offert.",
+    "Professionell fönsterputs i Kristianstad. Erfarna fönsterputsare för villor, lägenheter och företag. Städfirma med hemstädning och kontorsstädning. Kostnadsfri offert.",
   locale: "sv_SE",
 } as const;
 
@@ -27,7 +27,7 @@ export const CONTACT = {
 export const NAV_LINKS = [
   { href: "/", label: "Hem" },
   { href: "/fonsterputs-kristianstad", label: "Fönsterputs" },
-  { href: "/stadning", label: "Städning" },
+  { href: "/stadning-kristianstad", label: "Städning" },
   { href: "/om-oss", label: "Om Oss" },
   { href: "/kontakt", label: "Kontakt" },
 ] as const;
@@ -35,11 +35,11 @@ export const NAV_LINKS = [
 export const SERVICE_AREAS = [
   "Kristianstad",
   "Åhus",
-  "Bromölla",
   "Fjälkinge",
-  "Tollarp",
-  "Arkelstorp",
   "Degeberga",
+  "Bromölla",
+  "Arkelstorp",
+  "Tollarp",
 ] as const;
 
 export const SERVICES = [
@@ -49,9 +49,19 @@ export const SERVICES = [
     shortTitle: "Fönsterputs Kristianstad",
     description:
       "Professionell fönsterputs för villor, lägenheter och företag. Skinande rena fönster året runt.",
-    image: "/images/hero-fonsterputs.png",
+    imageKey: "hero" as const,
     featured: true,
     keywords: ["Fönsterputs Kristianstad", "Fönsterputsare Kristianstad"],
+  },
+  {
+    slug: "stadning-kristianstad",
+    title: "Städning",
+    shortTitle: "Städning Kristianstad",
+    description:
+      "Komplett städservice i Kristianstad – hemstädning, flyttstädning och kontorsstädning.",
+    imageKey: "hemstadning" as const,
+    featured: false,
+    keywords: ["Städning Kristianstad", "Städfirma Kristianstad"],
   },
   {
     slug: "hemstadning-kristianstad",
@@ -59,56 +69,46 @@ export const SERVICES = [
     shortTitle: "Hemstädning Kristianstad",
     description:
       "Regelbunden hemstädning med fokus på kvalitet, detaljer och din trygghet.",
-    image: "/images/hemstadning.png",
+    imageKey: "hemstadning" as const,
     featured: false,
     keywords: ["Hemstädning Kristianstad"],
-  },
-  {
-    slug: "flyttstadning-kristianstad",
-    title: "Flyttstädning",
-    shortTitle: "Flyttstädning Kristianstad",
-    description:
-      "Grundlig flyttstädning enligt branschstandard. Godkänd städning vid inflyttning och utflyttning.",
-    image: "/images/fonsterputs-squeegee.png",
-    featured: false,
-    keywords: ["Flyttstädning Kristianstad"],
   },
   {
     slug: "kontorsstadning-kristianstad",
     title: "Kontorsstädning",
     shortTitle: "Kontorsstädning Kristianstad",
     description:
-      "Professionell kontorsstädning för företag i Kristianstad. Renare arbetsmiljö, nöjdare medarbetare.",
-    image: "/images/hemstadning.png",
+      "Professionell kontorsstädning för företag i Kristianstad. Renare arbetsmiljö.",
+    imageKey: "squeegee" as const,
     featured: false,
     keywords: ["Kontorsstädning Kristianstad"],
   },
 ] as const;
 
-export const WHY_CHOOSE_US = [
+export const TRUST_CARDS = [
   {
-    title: "Erfaren personal",
-    description:
-      "Vårt team har lång erfarenhet av fönsterputs och städning i Kristianstad med fokus på kvalitet.",
-    icon: "users",
+    title: "Snabb återkoppling",
+    description: "Vi svarar inom 24 timmar på alla förfrågningar.",
   },
   {
-    title: "Snabb service",
-    description:
-      "Vi erbjuder snabb återkoppling och flexibla tider som passar dig och ditt schema.",
-    icon: "clock",
+    title: "Kostnadsfri offert",
+    description: "Tydligt prisförslag utan dolda avgifter eller förpliktelser.",
   },
   {
-    title: "Nöjd kund fokus",
-    description:
-      "Din tillfredsställelse är vår högsta prioritet. Vi jobbar tills du är helt nöjd.",
-    icon: "heart",
+    title: "Professionell service",
+    description: "Erfarna fönsterputsare och städare med rätt utrustning.",
   },
   {
-    title: "Lokalt företag",
-    description:
-      "Vi är ett lokalt företag i Kristianstad som känner området och våra kunders behov.",
-    icon: "map",
+    title: "Lokalt företag i Kristianstad",
+    description: "Vi känner området och är snabbt på plats när du behöver oss.",
+  },
+  {
+    title: "Nöjd kund-garanti",
+    description: "Vi jobbar tills du är helt nöjd med resultatet.",
+  },
+  {
+    title: "Fasta priser",
+    description: "Du vet exakt vad det kostar innan vi påbörjar arbetet.",
   },
 ] as const;
 

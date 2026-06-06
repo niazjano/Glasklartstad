@@ -33,7 +33,7 @@ jobs:
       - name: Build static export
         run: npm run build
         env:
-          NEXT_PUBLIC_SITE_URL: https://niazjano.github.io/Glasklartstad
+          NEXT_PUBLIC_SITE_URL: https://glasklartstad.se
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

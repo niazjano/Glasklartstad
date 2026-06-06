@@ -20,10 +20,12 @@ export const metadata: Metadata = {
       "Professionell fönsterputs i Kristianstad. Erfarna fönsterputsare för villor, lägenheter och företag. Städfirma med hemstädning, flyttstädning och kontorsstädning. Kostnadsfri offert – ring 076-285 53 34.",
     path: "/",
     keywords: [
-      "Professionell Fönsterputs Kristianstad",
+      "Fönsterputsning Kristianstad",
+      "Fönsterputs Kristianstad",
+      "Fönsterputsare Kristianstad",
+      "Städfirma Kristianstad",
+      "Städning Kristianstad",
       "Hemstädning Kristianstad",
-      "Flyttstädning Kristianstad",
-      "Kontorsstädning Kristianstad",
     ],
   }),
   icons: {
