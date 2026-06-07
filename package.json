@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && node scripts/fix-gh-pages-paths.mjs",
-    "export": "next build && node scripts/fix-gh-pages-paths.mjs",
+    "build": "next build && node -e \"if(process.env.FIX_GH_PAGES==='true'){require('child_process').execSync('node scripts/fix-gh-pages-paths.mjs',{stdio:'inherit'})}\"",
+    "export": "next build && FIX_GH_PAGES=true node scripts/fix-gh-pages-paths.mjs",
     "start": "next start",
     "lint": "next lint"
   },

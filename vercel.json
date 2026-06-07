@@ -1,14 +1,6 @@
 {
   "framework": "nextjs",
   "buildCommand": "npm run build",
-  "redirects": [
-    {
-      "source": "/:path*",
-      "has": [{ "type": "host", "value": "www.glasklartstad.se" }],
-      "destination": "https://glasklartstad.se/:path*",
-      "permanent": true
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
