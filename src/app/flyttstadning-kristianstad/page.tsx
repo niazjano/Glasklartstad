@@ -13,7 +13,7 @@ export const metadata: Metadata = createMetadata({
     "Professionell flyttstädning i Kristianstad enligt branschstandard. Godkänd städning vid inflyttning och utflyttning. Kostnadsfri offert.",
   path: "/flyttstadning-kristianstad",
   keywords: ["Flyttstädning Kristianstad"],
-  ogImage: IMAGES.squeegee,
+  ogImage: IMAGES.flyttstadning,
 });
 
 export default function FlyttstadningPage() {
@@ -35,7 +35,7 @@ export default function FlyttstadningPage() {
       <ServicePageLayout
         title="Flyttstädning Kristianstad"
         subtitle="Grundlig flyttstädning enligt branschstandard. Godkänd städning vid inflyttning och utflyttning i Kristianstad."
-        image={IMAGES.squeegee}
+        image={IMAGES.flyttstadning}
         imageAlt="Flyttstädning Kristianstad – professionell städservice"
       >
         <FlyttstadningContent />

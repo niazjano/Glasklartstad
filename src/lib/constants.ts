@@ -54,16 +54,6 @@ export const SERVICES = [
     keywords: ["Fönsterputs Kristianstad", "Fönsterputsare Kristianstad"],
   },
   {
-    slug: "stadning-kristianstad",
-    title: "Städning",
-    shortTitle: "Städning Kristianstad",
-    description:
-      "Komplett städservice i Kristianstad – hemstädning, flyttstädning och kontorsstädning.",
-    imageKey: "hemstadning" as const,
-    featured: false,
-    keywords: ["Städning Kristianstad", "Städfirma Kristianstad"],
-  },
-  {
     slug: "hemstadning-kristianstad",
     title: "Hemstädning",
     shortTitle: "Hemstädning Kristianstad",
@@ -79,9 +69,19 @@ export const SERVICES = [
     shortTitle: "Kontorsstädning Kristianstad",
     description:
       "Professionell kontorsstädning för företag i Kristianstad. Renare arbetsmiljö.",
-    imageKey: "squeegee" as const,
+    imageKey: "kontorsstadning" as const,
     featured: false,
     keywords: ["Kontorsstädning Kristianstad"],
+  },
+  {
+    slug: "flyttstadning-kristianstad",
+    title: "Flyttstädning",
+    shortTitle: "Flyttstädning Kristianstad",
+    description:
+      "Grundlig flyttstädning inför besiktning och överlämning. Vi lämnar bostaden redo för nästa boende.",
+    imageKey: "flyttstadning" as const,
+    featured: false,
+    keywords: ["Flyttstädning Kristianstad"],
   },
 ] as const;
 

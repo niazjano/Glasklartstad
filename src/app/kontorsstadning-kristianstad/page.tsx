@@ -13,7 +13,7 @@ export const metadata: Metadata = createMetadata({
     "Professionell kontorsstädning i Kristianstad för företag och kontor. Renare arbetsmiljö, nöjdare medarbetare. Kostnadsfri offert.",
   path: "/kontorsstadning-kristianstad",
   keywords: ["Kontorsstädning Kristianstad"],
-  ogImage: IMAGES.hemstadning,
+  ogImage: IMAGES.kontorsstadning,
 });
 
 export default function KontorsstadningPage() {
@@ -35,7 +35,7 @@ export default function KontorsstadningPage() {
       <ServicePageLayout
         title="Kontorsstädning Kristianstad"
         subtitle="Professionell kontorsstädning för företag i Kristianstad. Renare arbetsmiljö, nöjdare medarbetare och ett professionellt intryck."
-        image={IMAGES.hemstadning}
+        image={IMAGES.kontorsstadning}
         imageAlt="Kontorsstädning Kristianstad – professionell städservice för företag"
       >
         <KontorsstadningContent />

@@ -2,13 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { SERVICES } from "@/lib/constants";
 import { IMAGES } from "@/lib/images";
-import { cn } from "@/lib/utils";
-
-const imageMap = {
-  hero: IMAGES.hero,
-  hemstadning: IMAGES.hemstadning,
-  squeegee: IMAGES.squeegee,
-};
 
 export function ServicesSection() {
   return (
@@ -27,32 +20,20 @@ export function ServicesSection() {
           </p>
         </div>
 
-        <div className="mt-16 grid gap-8 lg:grid-cols-2">
+        <div className="mt-16 grid gap-8 sm:grid-cols-2">
           {SERVICES.map((service) => (
             <Link
               key={service.slug}
               href={`/${service.slug}`}
-              className={cn(
-                "group card-premium overflow-hidden p-0",
-                service.featured && "lg:col-span-2 lg:grid lg:grid-cols-2"
-              )}
+              className="group card-premium flex h-full flex-col overflow-hidden p-0"
             >
-              <div
-                className={cn(
-                  "relative aspect-[16/10] overflow-hidden bg-slate-100",
-                  service.featured ? "lg:aspect-auto lg:min-h-[340px]" : "h-52"
-                )}
-              >
+              <div className="relative h-56 w-full shrink-0 overflow-hidden sm:h-60">
                 <Image
-                  src={imageMap[service.imageKey]}
+                  src={IMAGES[service.imageKey]}
                   alt={`${service.title} i Kristianstad`}
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  sizes={
-                    service.featured
-                      ? "(max-width: 1024px) 100vw, 50vw"
-                      : "(max-width: 1024px) 100vw, 33vw"
-                  }
+                  sizes="(max-width: 640px) 100vw, 50vw"
                   unoptimized
                 />
                 {service.featured && (
@@ -61,16 +42,11 @@ export function ServicesSection() {
                   </span>
                 )}
               </div>
-              <div
-                className={cn(
-                  "p-8",
-                  service.featured && "flex flex-col justify-center"
-                )}
-              >
+              <div className="flex flex-1 flex-col p-8">
                 <h3 className="text-xl font-semibold text-[#081B3A] transition-colors group-hover:text-blue-600">
                   {service.title}
                 </h3>
-                <p className="mt-3 leading-relaxed text-slate-600">
+                <p className="mt-3 flex-1 leading-relaxed text-slate-600">
                   {service.description}
                 </p>
                 <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#081B3A]">
