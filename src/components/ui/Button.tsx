@@ -10,19 +10,19 @@ type ButtonProps = {
   external?: boolean;
 };
 
-const navy = "bg-[#0f172a] text-white border-2 border-[#0f172a]";
+const navy = "bg-[#081B3A] text-white border-2 border-[#081B3A]";
 const navyHover =
-  "hover:bg-[#1e293b] hover:border-[#1e293b] hover:shadow-lg hover:-translate-y-0.5";
+  "hover:bg-[#0c2449] hover:border-[#0c2449] hover:shadow-lg hover:-translate-y-0.5";
 
 const variants = {
   primary: cn(navy, navyHover, "shadow-md active:translate-y-0"),
   secondary: cn(
-    "bg-white text-[#0f172a] border-2 border-[#0f172a]",
+    "bg-white text-[#081B3A] border-2 border-[#081B3A]",
     "shadow-sm hover:bg-slate-50 hover:shadow-md hover:-translate-y-0.5 active:translate-y-0"
   ),
-  ghost: "text-[#0f172a] hover:bg-slate-100",
+  ghost: "text-[#081B3A] hover:bg-slate-100",
   darkPrimary: cn(
-    "bg-white text-[#0f172a] border-2 border-white",
+    "bg-white text-[#081B3A] border-2 border-white",
     "shadow-lg hover:bg-slate-50 hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0"
   ),
   darkSecondary: cn(

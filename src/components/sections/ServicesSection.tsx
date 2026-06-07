@@ -17,7 +17,7 @@ export function ServicesSection() {
         <div className="mx-auto max-w-2xl text-center">
           <h2
             id="services-heading"
-            className="text-3xl font-bold tracking-tight text-[#0f172a] sm:text-4xl"
+            className="text-3xl font-bold tracking-tight text-[#081B3A] sm:text-4xl"
           >
             Våra tjänster
           </h2>
@@ -56,7 +56,7 @@ export function ServicesSection() {
                   unoptimized
                 />
                 {service.featured && (
-                  <span className="absolute left-5 top-5 rounded-full bg-[#0f172a] px-4 py-1.5 text-xs font-semibold text-white">
+                  <span className="absolute left-5 top-5 rounded-full bg-[#081B3A] px-4 py-1.5 text-xs font-semibold text-white">
                     Vår specialitet
                   </span>
                 )}
@@ -67,13 +67,13 @@ export function ServicesSection() {
                   service.featured && "flex flex-col justify-center"
                 )}
               >
-                <h3 className="text-xl font-semibold text-[#0f172a] transition-colors group-hover:text-blue-600">
+                <h3 className="text-xl font-semibold text-[#081B3A] transition-colors group-hover:text-blue-600">
                   {service.title}
                 </h3>
                 <p className="mt-3 leading-relaxed text-slate-600">
                   {service.description}
                 </p>
-                <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#0f172a]">
+                <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#081B3A]">
                   Läs mer
                   <svg
                     className="h-4 w-4 transition-transform group-hover:translate-x-1"

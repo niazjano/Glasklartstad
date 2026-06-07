@@ -23,10 +23,10 @@ export function Hero() {
 
       <div className="relative mx-auto flex min-h-[calc(92vh-4rem)] max-w-7xl items-center px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl animate-fade-in-up">
-          <p className="mb-5 inline-block rounded-full bg-slate-100 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-[#0f172a]">
+          <p className="mb-5 inline-block rounded-full bg-slate-100 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-[#081B3A]">
             Fönsterputsare Kristianstad
           </p>
-          <h1 className="text-4xl font-bold leading-[1.1] tracking-tight text-[#0f172a] sm:text-5xl lg:text-6xl">
+          <h1 className="text-4xl font-bold leading-[1.1] tracking-tight text-[#081B3A] sm:text-5xl lg:text-6xl">
             Professionell Fönsterputs i Kristianstad
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-slate-600 sm:text-xl">
@@ -48,9 +48,9 @@ export function Hero() {
             {TRUST_BADGES.map((badge) => (
               <li
                 key={badge}
-                className="flex items-center gap-2.5 text-sm font-medium text-[#0f172a]"
+                className="flex items-center gap-2.5 text-sm font-medium text-[#081B3A]"
               >
-                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#0f172a] text-xs text-white">
+                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#081B3A] text-xs text-white">
                   ✓
                 </span>
                 {badge}

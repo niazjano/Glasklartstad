@@ -7,7 +7,7 @@ export function AreasSection() {
         <div className="mx-auto max-w-2xl text-center">
           <h2
             id="areas-heading"
-            className="text-3xl font-bold tracking-tight text-[#0f172a] sm:text-4xl"
+            className="text-3xl font-bold tracking-tight text-[#081B3A] sm:text-4xl"
           >
             Områden vi betjänar
           </h2>
@@ -21,7 +21,7 @@ export function AreasSection() {
           {SERVICE_AREAS.map((area) => (
             <li
               key={area}
-              className="rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-[#0f172a] shadow-sm transition-all hover:border-[#0f172a] hover:shadow-md"
+              className="rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-[#081B3A] shadow-sm transition-all hover:border-[#081B3A] hover:shadow-md"
             >
               {area}
             </li>

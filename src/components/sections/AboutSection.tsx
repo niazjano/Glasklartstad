@@ -22,7 +22,7 @@ export function AboutSection() {
           <div>
             <h2
               id="about-heading"
-              className="text-3xl font-bold tracking-tight text-[#0f172a] sm:text-4xl"
+              className="text-3xl font-bold tracking-tight text-[#081B3A] sm:text-4xl"
             >
               Din lokala städpartner i Kristianstad
             </h2>

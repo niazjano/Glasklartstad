@@ -5,7 +5,7 @@ import { CONTACT, ROUTES, SERVICE_AREAS, SERVICES, SITE } from "@/lib/constants"
 
 export function Footer() {
   return (
-    <footer className="border-t border-slate-800 bg-[#0f172a] text-white">
+    <footer className="border-t border-slate-800 bg-[#081B3A] text-white">
       <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div>

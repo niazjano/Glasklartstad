@@ -26,7 +26,7 @@ export default function GratisOffertPage() {
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
             Kostnadsfri offert
           </p>
-          <h1 className="mt-4 text-4xl font-bold tracking-tight text-[#0f172a] sm:text-5xl">
+          <h1 className="mt-4 text-4xl font-bold tracking-tight text-[#081B3A] sm:text-5xl">
             Få en Gratis Offert
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-slate-600">
@@ -39,7 +39,7 @@ export default function GratisOffertPage() {
               className="text-sm text-slate-600"
             >
               Mobil:{" "}
-              <span className="font-semibold text-[#0f172a]">{CONTACT.mobile}</span>
+              <span className="font-semibold text-[#081B3A]">{CONTACT.mobile}</span>
             </a>
             <span className="hidden text-slate-300 sm:inline" aria-hidden>|</span>
             <a
@@ -47,7 +47,7 @@ export default function GratisOffertPage() {
               className="text-sm text-slate-600"
             >
               Kontor:{" "}
-              <span className="font-semibold text-[#0f172a]">{CONTACT.office}</span>
+              <span className="font-semibold text-[#081B3A]">{CONTACT.office}</span>
             </a>
           </div>
         </div>

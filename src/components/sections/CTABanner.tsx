@@ -3,7 +3,7 @@ import { CONTACT, ROUTES, SITE } from "@/lib/constants";
 
 export function CTABanner() {
   return (
-    <section className="bg-[#0f172a] py-20 sm:py-28">
+    <section className="bg-[#081B3A] py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
           Redo för skinande rena fönster?

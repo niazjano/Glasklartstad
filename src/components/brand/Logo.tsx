@@ -1,6 +1,9 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
+const NAVY = "#081B3A";
+const BLUE = "#2D5BFF";
+
 type LogoProps = {
   variant?: "default" | "light";
   showText?: boolean;
@@ -15,9 +18,10 @@ export function LogoIcon({
   className?: string;
   variant?: "default" | "light";
 }) {
-  const frame = variant === "light" ? "#ffffff" : "#0f172a";
-  const glass = variant === "light" ? "#e2e8f0" : "#94a3b8";
-  const sparkle = variant === "light" ? "#60a5fa" : "#3b82f6";
+  const frame = variant === "light" ? "#ffffff" : NAVY;
+  const mullion = variant === "light" ? "#ffffff" : NAVY;
+  const glass = variant === "light" ? "#ffffff" : BLUE;
+  const sparkle = variant === "light" ? "#ffffff" : BLUE;
 
   return (
     <svg
@@ -27,23 +31,48 @@ export function LogoIcon({
       className={cn("h-10 w-10 shrink-0", className)}
       aria-hidden
     >
-      <rect x="8" y="8" width="32" height="32" rx="3" stroke={frame} strokeWidth="2.5" />
-      <line x1="24" y1="8" x2="24" y2="40" stroke={glass} strokeWidth="1.5" />
-      <line x1="8" y1="24" x2="40" y2="24" stroke={glass} strokeWidth="1.5" />
+      <rect
+        x="6"
+        y="6"
+        width="36"
+        height="36"
+        rx="4"
+        stroke={frame}
+        strokeWidth="2.5"
+        fill="none"
+      />
+      <line
+        x1="24"
+        y1="6"
+        x2="24"
+        y2="42"
+        stroke={mullion}
+        strokeWidth="1.25"
+        opacity="0.3"
+      />
+      <line
+        x1="6"
+        y1="24"
+        x2="42"
+        y2="24"
+        stroke={mullion}
+        strokeWidth="1.25"
+        opacity="0.3"
+      />
       <path
-        d="M14 30 L20 18 L26 26 L32 14"
-        stroke={sparkle}
+        d="M11 33 L19 17 L27 25"
+        stroke={glass}
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        opacity="0.85"
+        opacity="0.45"
       />
+      <circle cx="16" cy="18" r="2" fill={sparkle} opacity="0.3" />
       <path
-        d="M30 12 L32 16 L36 14 L34 18 L38 20 L34 22 L36 26 L32 24 L30 28 L28 24 L24 26 L26 22 L22 20 L26 18 L24 14 L28 16 Z"
+        d="M31 13 L32.1 15.4 L34.6 14.5 L33 16.6 L35.2 18.4 L32.8 19.2 L33.5 21.8 L31.2 20.4 L29 21.8 L29.7 19.2 L27.3 18.4 L29.5 16.6 L27.9 14.5 L30.4 15.4 Z"
         fill={sparkle}
         opacity="0.95"
       />
-      <circle cx="17" cy="17" r="2" fill={sparkle} opacity="0.35" />
     </svg>
   );
 }
@@ -69,7 +98,7 @@ export function Logo({
           <span
             className={cn(
               "text-lg font-bold tracking-tight",
-              isLight ? "text-white" : "text-[#0f172a]"
+              isLight ? "text-white" : "text-[#081B3A]"
             )}
           >
             Glasklart

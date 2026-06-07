@@ -27,7 +27,7 @@ export default function OmOssPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div>
-              <h1 className="text-4xl font-bold tracking-tight text-[#0f172a] sm:text-5xl">
+              <h1 className="text-4xl font-bold tracking-tight text-[#081B3A] sm:text-5xl">
                 Om {SITE.shortName}
               </h1>
               <p className="mt-6 text-lg leading-relaxed text-slate-600">
@@ -53,7 +53,7 @@ export default function OmOssPage() {
 
       <section className="bg-slate-50 py-20">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-[#0f172a]">Vår historia och värderingar</h2>
+          <h2 className="text-3xl font-bold text-[#081B3A]">Vår historia och värderingar</h2>
           <div className="mt-6 space-y-4 leading-relaxed text-slate-600">
             <p>
               {SITE.name} grundades med visionen att erbjuda den bästa
@@ -72,13 +72,13 @@ export default function OmOssPage() {
 
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-center text-3xl font-bold text-[#0f172a]">
+          <h2 className="text-center text-3xl font-bold text-[#081B3A]">
             Det här skiljer oss åt
           </h2>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {TRUST_CARDS.map((item) => (
               <div key={item.title} className="card-premium p-6">
-                <h3 className="font-semibold text-[#0f172a]">{item.title}</h3>
+                <h3 className="font-semibold text-[#081B3A]">{item.title}</h3>
                 <p className="mt-2 text-sm text-slate-600">{item.description}</p>
               </div>
             ))}
@@ -88,7 +88,7 @@ export default function OmOssPage() {
 
       <section className="bg-slate-50 py-20">
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-[#0f172a]">Områden vi betjänar</h2>
+          <h2 className="text-3xl font-bold text-[#081B3A]">Områden vi betjänar</h2>
           <p className="mt-4 text-slate-600">
             Vi utför fönsterputs och städning i {SERVICE_AREAS.join(", ")}.
           </p>

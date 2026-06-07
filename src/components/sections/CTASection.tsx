@@ -23,7 +23,7 @@ export function CTASection({
     <section
       className={cn(
         "py-20 sm:py-24",
-        variant === "dark" && "bg-[#0f172a]",
+        variant === "dark" && "bg-[#081B3A]",
         variant === "surface" && "bg-slate-50",
         variant === "light" && "bg-white",
         className
@@ -33,7 +33,7 @@ export function CTASection({
         <h2
           className={cn(
             "text-2xl font-bold tracking-tight sm:text-3xl lg:text-4xl",
-            isDark ? "text-white" : "text-[#0f172a]"
+            isDark ? "text-white" : "text-[#081B3A]"
           )}
         >
           {title}

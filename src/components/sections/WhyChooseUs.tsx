@@ -7,7 +7,7 @@ export function WhyChooseUs() {
         <div className="mx-auto max-w-2xl text-center">
           <h2
             id="why-heading"
-            className="text-3xl font-bold tracking-tight text-[#0f172a] sm:text-4xl"
+            className="text-3xl font-bold tracking-tight text-[#081B3A] sm:text-4xl"
           >
             Varför välja Glasklart?
           </h2>
@@ -23,10 +23,10 @@ export function WhyChooseUs() {
               key={item.title}
               className="card-premium group p-8"
             >
-              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#0f172a] text-sm font-bold text-white">
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#081B3A] text-sm font-bold text-white">
                 ✓
               </span>
-              <h3 className="mt-5 text-lg font-semibold text-[#0f172a]">
+              <h3 className="mt-5 text-lg font-semibold text-[#081B3A]">
                 {item.title}
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-slate-600">
