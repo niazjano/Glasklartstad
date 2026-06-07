@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { JsonLd } from "@/components/JsonLd";
-import { SITE } from "@/lib/constants";
 import { asset } from "@/lib/paths";
 import { createMetadata, localBusinessSchema } from "@/lib/seo";
 import "./globals.css";
@@ -43,11 +42,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="sv">
-      <head>
-        {process.env.NODE_ENV === "production" && (
-          <base href={`${SITE.url}/`} />
-        )}
-      </head>
       <body className={`${inter.variable} antialiased`}>
         <JsonLd data={localBusinessSchema()} />
         <Header />
